@@ -1,7 +1,7 @@
 name: Node.js Test Workflow
 
 on:
-  workflow_call:  # This defines that this workflow can be called by other workflows
+  workflow_call:  # Allows other workflows to call this one
 
 jobs:
   test:
@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Specify the Node.js version you want to use
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install

@@ -1,0 +1,15 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  call-reusable-workflow:
+    uses: ./.github/workflows/reusable/nodejs-tests.yml
+    with:
+      node-version: '16'  # Pass any necessary variables here
